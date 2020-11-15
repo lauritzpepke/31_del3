@@ -22,5 +22,10 @@ public class Die {
         return value;
     }
 
+    public int getNumberOfSides() {
+        return numberOfSides;
+    }
+
+
 
 }
