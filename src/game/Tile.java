@@ -17,6 +17,7 @@ public class Tile {
         this.ownerNumber = ownerNumber;
     }
 
+
     public int getOwnerNumber() {
         return ownerNumber;
     }
