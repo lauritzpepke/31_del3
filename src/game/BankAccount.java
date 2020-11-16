@@ -1,9 +1,9 @@
 package game;
 
-public class Account {
+public class BankAccount {
     private int balance;
 
-    public Account() {
+    public BankAccount() {
         this.balance = 0;
     }
 
