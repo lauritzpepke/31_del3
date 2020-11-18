@@ -7,9 +7,15 @@ package bræt;
 import game.Spiller;
 import gui_main.GUI;
 
+/* @author Gruppe 31
+*Vi har her kaldt den klasse "OverordnedeFelter",
+da den indgår for hvert felts egenskaber
+*/
+
+
 public abstract class OverordnedeFelter {
 
-// Vi anvender "protected", så de kan tilgængelig for pakken og hermed de nedarvede klasser
+// Vi anvender "protected", så de kan vær tilgængelige for pakken og hermed de nedarvede klasser
 
     protected int feltnr;
     protected GUI gui;

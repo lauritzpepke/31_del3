@@ -12,9 +12,9 @@ import gui_fields.GUI_Street;
 import gui_main.GUI;
 
 
-/** Her frembringes spillebrættet til Monoply Junior
- *Det indebærer, det viuselle look, egenskaberne for hvert enkelt felt(der behandler tekst, type og plads)
- * @author Gruppe 31
+/** @author Gruppe 31
+ *Her frembringes spillebrættet til Monoply Junior
+ * Det indebærer, det viuselle look, egenskaberne for hvert enkelt felt(der behandler tekst, type og plads)
  */
 
 public class Bræt {
