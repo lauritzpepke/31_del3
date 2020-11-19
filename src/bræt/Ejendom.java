@@ -74,7 +74,6 @@ public class Ejendom extends OverordnedeFelter {
 
 
 // setEjer sætter ejeren på ejendomsfeltet og markerer feltet med spillerens farve.
-//dsa
     public void setEjer(Spiller spiller) {
         GUI_Field f = gui.getFields()[feltnr];
         if(f instanceof GUI_Ownable){
