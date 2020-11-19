@@ -32,7 +32,7 @@ public class Chance extends OverordnedeFelter {
      * Vores er parameter er @param Spiller/Player
      */
     @Override
-    Public void landOnField (Spiller spiller){
+    public void landOnField (Spiller spiller){
         String felt;
         gui.showMessage(toString());
         setChancekort();
