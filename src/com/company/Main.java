@@ -1,11 +1,11 @@
 package com.company;
 
 
-import game.Game;
+import game.Spil;
 
 public class Main {
     public static void main(String[] args) {
-        Game game = new Game();
-        game.playGame();
+        Spil spil = new Spil();
+        Spil.playGame();
         }
 }

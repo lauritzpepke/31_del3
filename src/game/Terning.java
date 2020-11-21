@@ -3,12 +3,12 @@ package game;
 
 import java.util.Random;
 
-public class Die {
+public class Terning {
     private int value;
     private Random r;
     private int numberOfSides;
 
-    public Die() {
+    public Terning() {
         r = new Random();
         numberOfSides = 6;
     }

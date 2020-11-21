@@ -1,11 +1,11 @@
 package game;
 
-public class Tile {
+public class Felt {
     String type, title;
     private int group, price;
     private int ownerNumber;
 
-    public Tile(String type, int group, String title, int price) {
+    public Felt(String type, int group, String title, int price) {
         this.type = type;
         this.group = group;
         this.title = title;

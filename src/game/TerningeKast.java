@@ -1,8 +1,8 @@
 package game;
 
-public class DieThrow {
+public class TerningeKast {
     private int dieValue;
-    Die die = new Die();
+    Terning die = new Terning();
 
     public void throwTheDie() {
         die.roll();
