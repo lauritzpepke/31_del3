@@ -1,8 +1,8 @@
 package game;
 
-public class CheckWinner {
+public class CheckVinder {
 
-    public boolean hasLost(BankAccount ba)
+    public boolean hasLost(BankKonto ba)
     {
         int balance=ba.getBalance();
         if (balance<0)
