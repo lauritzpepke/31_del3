@@ -12,9 +12,7 @@ public class Spiller {
     private boolean frikort;
     BankKonto bk = new BankKonto();
 
-    public Spiller(String navn) {
-        this.navn = navn;
-    }
+    public void setNavn(String navn) { this.navn = navn; }
 
     public String getNavn() {
         return navn;
@@ -28,16 +26,16 @@ public class Spiller {
         return alder;
     }
 
-    public void skiftPlacering() {
-
-    }
-
-    public void setPlacering() {
+    public void setPlacering(int placering) {
         this.placering = placering;
     }
 
     public int getPlacering() {
         return placering;
+    }
+
+    public void skiftPlacering() {
+
     }
 
     public void setFarve(Color farve) {
