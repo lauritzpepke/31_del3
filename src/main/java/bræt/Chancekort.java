@@ -1,4 +1,4 @@
-
+package main.java.bræt;
 /*
  * @author Gruppe31
  * Chancekort_klassen fremkalder chancekort
@@ -8,7 +8,9 @@ public class Chancekort {
     /*
      * Vi vil nu erklære et String array ved navn "kort"
      */
-    private Chancekort(){ FremkaldChancekort(); }
+    private String[] kort;
+
+    public Chancekort(){ FremkaldChancekort(); }
 
     // Her instantieres String[] kort
     // I spillet er der 16 chancekort, som bliver gemt(som vi mener er mest relevant at have med),

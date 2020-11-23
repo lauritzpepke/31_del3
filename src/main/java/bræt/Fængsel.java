@@ -1,4 +1,4 @@
-package bræt;
+package main.java.bræt;
 
 import game.Spiller;
 import gui_main.GUI;
@@ -7,7 +7,7 @@ import gui_main.GUI;
 // Klassen "Fængsel" nedarves fra OverordnedeFelter
 
 
-public class Fængsel extends OverordnedeFelter {
+public class Fængsel extends bræt.OverordnedeFelter {
 
     public Fængsel (int feltnr, GUI gui) {
         super(feltnr, gui);
@@ -28,7 +28,7 @@ public class Fængsel extends OverordnedeFelter {
     public void landOnField(Spiller spiller) {
         gui.showMessage(toString());
         setFængsel(spiller);
-        spiller.setFængsel(true):
+        spiller.setFængsel(true);
     }
 
 }

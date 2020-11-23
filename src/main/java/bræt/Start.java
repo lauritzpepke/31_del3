@@ -1,4 +1,4 @@
-package bræt;
+package main.java.bræt;
 
 
 import game.Spiller;
@@ -24,7 +24,7 @@ public class Start extends OverordnedeFelter {
             return "Du har landet på start, og vil derfor modtage en startbonus på " + startbonus + "M";
     }
         else{
-            return "Du har passeret start, og vil derfor modtage en startbonus på " + startbonus + "M":
+            return "Du har passeret start, og vil derfor modtage en startbonus på " + startbonus + "M";
 
         }
     }

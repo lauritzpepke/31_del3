@@ -1,6 +1,6 @@
-package bræt;
+package main.java.bræt;
 
-import game.Spiller;
+import main.java.game.Spiller;
 import gui_main.GUI;
 
 //@author gruppe 31
@@ -10,7 +10,7 @@ import gui_main.GUI;
 
 
 
-public class Inaktiv extends OverordnedeFelter {
+public class Inaktiv extends bræt.OverordnedeFelter {
     private String feltNavn;
 
     // Vi laver nu en konstruktør, der angiver de inaktive felters placering på spillebrættet ud fra feltnumrene

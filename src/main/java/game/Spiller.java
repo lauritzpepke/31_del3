@@ -10,7 +10,7 @@ public class Spiller {
     private boolean fængsel;
     private boolean gratis;
     private boolean frikort;
-    BankKonto bk = new BankKonto();
+    game.BankKonto bk = new game.BankKonto();
 
     public void setNavn(String navn) { this.navn = navn; }
 
@@ -42,7 +42,7 @@ public class Spiller {
         this.farve = farve;
     }
 
-    public Color getFarve() {
+    public static Color getFarve() {
         return farve;
     }
 
@@ -70,4 +70,15 @@ public class Spiller {
         return frikort;
     }
 
+    public boolean getGratis() {
+    }
+
+    public void tilførSkøde(int feltnr, int i) {
+    }
+
+    public boolean ejerEjendom(int makkerFeltnr) {
+    }
+
+    public void ændrLikvideMidler(int i) {
+    }
 }

@@ -18,6 +18,6 @@ import gui_main.GUI;
  */
 
 public class Bræt {
-    Private GUI_Field[] fields = new GUI_Fields [24]
-    Private OverordnedeFelter[] felter = new OverordnedeFelter [24];
+//    Private GUI_Field[] fields = new GUI_Fields [24]
+//    Private OverordnedeFelter[] felter = new OverordnedeFelter [24];
 }

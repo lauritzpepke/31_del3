@@ -1,16 +1,17 @@
-package bræt;
+package main.java.bræt;
 
 
-import game.Spiller;
-import gui.fields.GUI_Field;
-import gui.fields.GUI_Ownable;
+import main.java.game.Spiller;
+import gui_fields.GUI_Field;
+import gui_fields.GUI_Ownable;
 import gui_main.GUI;
+
 
 // Klassens ejendom nedarver fra OverordnedeFelter.
 // De forskellig klasser stå for oprettelsen af ejendomsfelterne og deres individuelle pris og egenskaber på brættet.
 
 
-public class Ejendom extends OverordnedeFelter {
+public class Ejendom extends bræt.OverordnedeFelter {
 
     private boolean tilsalg = true;
     private int pris;
