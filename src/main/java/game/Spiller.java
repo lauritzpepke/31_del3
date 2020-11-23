@@ -1,8 +1,10 @@
 package main.java.game;
 
+import game.BankKonto;
+
 import java.awt.*;
 
-public class Spiller {
+public class Spiller extends BankKonto {
     private String navn;
     private int alder;
     private int placering = 0;
@@ -10,7 +12,7 @@ public class Spiller {
     private boolean fængsel;
     private boolean gratis;
     private boolean frikort;
-    game.BankKonto bk = new game.BankKonto();
+
 
     public void setNavn(String navn) { this.navn = navn; }
 
