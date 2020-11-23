@@ -1,4 +1,4 @@
-package main.java.bræt;
+package bræt;
 
 import main.java.game.Spiller;
 import gui_main.GUI;

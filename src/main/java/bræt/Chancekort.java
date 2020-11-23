@@ -1,4 +1,4 @@
-package main.java.bræt;
+package bræt;
 /*
  * @author Gruppe31
  * Chancekort_klassen fremkalder chancekort

@@ -1,4 +1,4 @@
-package game;
+package main.java.game;
 
 import java.awt.*;
 
@@ -6,7 +6,7 @@ public class Spiller {
     private String navn;
     private int alder;
     private int placering = 0;
-    private Color farve;
+    private static Color farve;
     private boolean fængsel;
     private boolean gratis;
     private boolean frikort;
@@ -71,12 +71,14 @@ public class Spiller {
     }
 
     public boolean getGratis() {
+        return false;
     }
 
     public void tilførSkøde(int feltnr, int i) {
     }
 
     public boolean ejerEjendom(int makkerFeltnr) {
+        return false;
     }
 
     public void ændrLikvideMidler(int i) {

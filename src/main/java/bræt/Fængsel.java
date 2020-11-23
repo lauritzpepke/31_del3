@@ -1,6 +1,6 @@
 package main.java.bræt;
 
-import game.Spiller;
+import main.java.game.Spiller;
 import gui_main.GUI;
 
 

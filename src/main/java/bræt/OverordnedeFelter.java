@@ -4,7 +4,7 @@
 
 package bræt;
 
-import game.Spiller;
+import main.java.game.Spiller;
 import gui_main.GUI;
 
 /* @author Gruppe 31
