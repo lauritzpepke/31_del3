@@ -1,8 +1,17 @@
 package game;
 
+/**
+ * Klasse der indeholder brættet til spillet
+ */
 public class Bræt {
+    /**
+     * Lavet et felt-array
+     */
     private Felt[] tiles;
 
+    /**
+     * Lavet 24 felter i arrayet og givet dem værdier
+     */
     public Bræt() {
         tiles = new Felt[24];
         tiles[0] = new Felt("Start", 0, "Start", -2);
@@ -31,6 +40,10 @@ public class Bræt {
         tiles[23] = new Felt("ownable", 8, "Strandpromenaden", 5);
     }
 
+    /**
+     * Metode der retunere felterne
+     * @return felterne i felt-arrayet
+     */
     public Felt[] getTiles() {
         return tiles;
     }
