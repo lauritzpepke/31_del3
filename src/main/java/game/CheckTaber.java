@@ -1,6 +1,6 @@
 package game;
 
-public class CheckVinder {
+public class CheckTaber {
 
     public boolean hasLost(BankKonto ba)
     {
