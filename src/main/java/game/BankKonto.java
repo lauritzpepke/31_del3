@@ -1,5 +1,8 @@
 package game;
 
+/**
+ * Klasse for spillernes pengebeholdning
+ */
 public class BankKonto {
     private int balance;
 
