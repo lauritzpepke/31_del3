@@ -78,7 +78,7 @@ public class Ejendom extends bræt.OverordnedeFelter {
         GUI_Field f = gui.getFields()[feltnr];
         if(f instanceof GUI_Ownable){
             GUI_Ownable o = (GUI_Ownable) f;
-            o.setBorder(Spiller.getFarve(), spiller.getFarve());
+            o.setBorder(Spiller.getFarve(), Spiller.getFarve());
         }
         this.spiller = spiller;
     }
