@@ -2,12 +2,11 @@ package game;
 public class Spil {
 TerningeKast dieThrow = new TerningeKast();
 
-public void playGame()
+void playGame()
 {
-    int antalSpillere;
 
     // kør metode for nye spillere, return værdi af antal spillere
-    antalSpillere =
+    int antalSpillere = UI.bestemAntalSpillere();
 
     // bruger gui
     // få info fra spillere
