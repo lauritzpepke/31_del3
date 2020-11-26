@@ -4,6 +4,11 @@ TerningeKast dieThrow = new TerningeKast();
 
 public void playGame()
 {
+    int antalSpillere;
+
+    // kør metode for nye spillere, return værdi af antal spillere
+    antalSpillere =
+
     // bruger gui
     // få info fra spillere
     // MINDST 2 spillere MAKS 4
@@ -23,4 +28,7 @@ public void playGame()
 
 
     }
+
+
+
 }
