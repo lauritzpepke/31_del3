@@ -2,7 +2,7 @@ package game;
 public class Spil {
 TerningeKast dieThrow = new TerningeKast();
 
-void playGame()
+public void playGame()
 {
 
     // kør metode for nye spillere, return værdi af antal spillere
@@ -14,6 +14,8 @@ void playGame()
 
 
     // opret spillere
+    Spiller[] spillerArray = new Spiller[antalSpillere];
+
 
     // rækkefølge baseret på alder
 
