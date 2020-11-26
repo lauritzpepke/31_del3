@@ -8,7 +8,7 @@ import gui_main.GUI;
 * som også derved vil få udskrevet chancekorten inde på gui´en.
  */
 public class Chance extends bræt.OverordnedeFelter {
-//    private Chancekort chance = new Chancekort ();
+ private Chancekort chance = new Chancekort ();
     private String chanceTekstbeskrivelse;
 
     /**
@@ -22,7 +22,7 @@ public class Chance extends bræt.OverordnedeFelter {
     @Override
     public String toString(){ return "Du har nu landet på Chance, nu skal du bare trykke FORTSÆT for at trække et chancekort.";}
 
-//    public void setChancekort() {this.chanceTekstbeskrivelse = chance.trukketKort();}
+    public void setChancekort() {this.chanceTekstbeskrivelse = chance.trukketKort();}
 
     public String getChancekort(){ return chanceTekstbeskrivelse.split("#")[1];}
 
@@ -50,7 +50,7 @@ public class Chance extends bræt.OverordnedeFelter {
                 gui.setChanceCard(getChancekort());
                 gui.displayChanceCard();
                 felt = gui.getUserSelection("Hvor mange felter vil du rykke frem?", "0", "1", "2", "3", "4", "5");
-//                spiller.opdaterPlacering(Integer.parseInt(felt));
+               spiller.setPlacering(Integer.parseInt(felt));
                 break;
             case "Chance3":
                 gui.setChanceCard(getChancekort());
@@ -67,7 +67,7 @@ public class Chance extends bræt.OverordnedeFelter {
                         spiller.setPlacering(spiller.getPlacering() + 1);
                 }
                 else{
-//                    setChancekort();
+                    setChancekort();
                     nytKort = true;
                 }
                 break;
@@ -75,7 +75,7 @@ public class Chance extends bræt.OverordnedeFelter {
                     gui.setChanceCard(getChancekort());
                     gui.displayChanceCard();
                     gui.showMessage("Du skal betale 2M til banken");
-//                    spiller.ændrBalance(-2);
+                    spiller.changeBalance(-2);
                     break;
             case "Chance6":
                 gui.setChanceCard(getChancekort());
@@ -107,7 +107,7 @@ public class Chance extends bræt.OverordnedeFelter {
                 gui.setChanceCard(getChancekort());
                 gui.displayChanceCard();
                 gui.showMessage("");
-//                spiller.setFødselsdag(true);
+        //        spiller.setFødselsdag(true);
                 break;
             case "Chance11":
                 gui.setChanceCard(getChancekort());
@@ -120,7 +120,7 @@ public class Chance extends bræt.OverordnedeFelter {
                 gui.setChanceCard(getChancekort());
                 gui.displayChanceCard();
                 gui.showMessage("");
-//                spiller.ændrLikvideMidler(2);
+                spiller.ændrLikvideMidler(2);
                 break;
             case "Chance13":
                 gui.setChanceCard(getChancekort());
