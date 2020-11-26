@@ -1,7 +1,6 @@
 package bræt;
 
-
-import main.java.game.Spiller;
+import game.Spiller;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Ownable;
 import gui_main.GUI;

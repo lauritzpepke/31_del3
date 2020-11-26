@@ -1,8 +1,8 @@
-package main.java.bræt;
+package bræt;
 
 
 import bræt.OverordnedeFelter;
-import main.java.game.Spiller;
+import game.Spiller;
 import gui_main.GUI;
 
 // Klassen "Start" nedarves fra OverordnedeFelter

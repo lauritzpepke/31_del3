@@ -1,6 +1,6 @@
 package bræt;
 
-import main.java.game.Spiller;
+import game.Spiller;
 import gui_main.GUI;
 
 //@author gruppe 31
