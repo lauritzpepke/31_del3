@@ -7,20 +7,20 @@ import java.awt.*;
 public class Spiller {
     private String navn;
     private BankKonto bk;
-    private int alder;
     private int nuværendePlacering = 0;
     private static Color farve;
-    private boolean fængsel;
-    private boolean gratis;
-    private boolean frikort;
+//    private boolean fængsel;
+//    private boolean gratis;
+//    private boolean frikort;
     private GUI_Car bil;
     private int rigdom;
-    private int balance;
+    private int balance = 0;
 
     public Spiller(String navn, int balance, GUI_Car bil) {
         this.navn = navn;
         this.bk = new BankKonto(balance);
         this.bil = bil;
+        rigdom = this.getBalance();
     }
 
     public String getNavn() {
