@@ -4,8 +4,7 @@ import gui_fields.GUI_Car;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Player;
 import java.awt.*;
-import java.util.Scanner;
-
+import game.CheckTaber;
 import gui_main.GUI;
 
 public class Spil {
@@ -51,76 +50,51 @@ public static void playGame()
         field.setCar(spillere[i], true);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // opret spillere
-    /**
-     * Oprettet forskellige objekter og array's
-     */
-    String[] navn = new String[4];
-    Color[] farve = {Color.red, Color.BLUE, Color.green, Color.yellow};
     CheckTaber taber = new CheckTaber();
+            while(!taber.isCheckTaber()) {
+                for(int i = 0; i < spillerArray.length; i++) {
+                    if(taber.isCheckTaber()){ // Tjekkem om spiller har tabt
+                        break;
+                    }
+                    TerningeKast(spillerArray[i], spillerArray, i, gui);   //Kaster terning
+                    int felt = tur(spillerArray[i], spillerArray, i, gui); // Bruger tur
+                    if(taber.isCheckTaber()){  // Tjekker om spiller har tabt
+                        break;
+                    }
 
 
-
-    // switch(antalSpillere) {
-      //  case 2:
-        //    spillere[] =new GUI_Player(navn[],20, bil[]);
-        //    break;
-       // case 3:
-        //    spillere[] =new GUI_Player(navn[],18, bil[]);
-       //     break;
-       // case 4:
-      //      spillere[] =new GUI_Player(navn[],16, bil[]);
-        //    break;
-      //  default:
-       //     break;
-   // }
+                    // opret spillere
+                    /**
+                     * Oprettet forskellige objekter og array's
+                     */
+                    String[] navn = new String[4];
+                    Color[] farve = {Color.red, Color.BLUE, Color.green, Color.yellow};
 
 
-}
+                    // switch(antalSpillere) {
+                    //  case 2:
+                    //    spillere[] =new GUI_Player(navn[],20, bil[]);
+                    //    break;
+                    // case 3:
+                    //    spillere[] =new GUI_Player(navn[],18, bil[]);
+                    //     break;
+                    // case 4:
+                    //      spillere[] =new GUI_Player(navn[],16, bil[]);
+                    //    break;
+                    //  default:
+                    //     break;
+                    // }
 
 
-    // rækkefølge baseret på alder
+                    // rækkefølge baseret på alder
 
 
-    // start gui for selve spillet
+                    // start gui for selve spillet
 
-    // kør spil indtil en går fallit
+                    // kør spil indtil en går fallit
 
 
-    //bestem vinder
-
+                    //bestem vinder
+                }
 
     }
-
-
-
-

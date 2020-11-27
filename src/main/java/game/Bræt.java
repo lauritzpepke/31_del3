@@ -187,6 +187,8 @@ public class Bræt {
         fields[23].setBackGroundColor(Color.BLUE); //Very light blue
 
         return fields;
+
+
         };
         }
 
