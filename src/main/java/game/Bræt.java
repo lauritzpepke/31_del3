@@ -56,10 +56,7 @@ public class Bræt {
                 new GUI_Street(),
                 new GUI_Chance(),
                 new GUI_Jail(),
-
-
-        }
+        };
         }
     }
 
-}
