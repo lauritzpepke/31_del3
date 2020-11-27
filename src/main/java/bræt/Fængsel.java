@@ -15,6 +15,7 @@ public class Fængsel extends bræt.OverordnedeFelter {
 
 // Udskrivelsen af toString beskeden, er når en spiller lander på et felt
 
+    @Override
     public String toString(){
         return "Du er blevet busted i at stjæle slik, og skal derfor i fængsel";
     }
@@ -24,7 +25,8 @@ public class Fængsel extends bræt.OverordnedeFelter {
     }
 
 // landOnField består af fængselfeltets spil logik
-
+// Vores parameter @param Spiller
+    @Override
     public void landOnField(Spiller spiller) {
         gui.showMessage(toString());
         setFængsel(spiller);
