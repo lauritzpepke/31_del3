@@ -9,35 +9,37 @@ import gui_main.GUI;
  */
 public class Chance extends bræt.OverordnedeFelter {
  private Chancekort chance = new Chancekort ();
-    private String chanceTekstbeskrivelse;
+ private String chanceTekstbeskrivelse;
 
-    /**
-     * Vi laver en konstruktør, der tager feltnumre (tilenumre) og gui´en som dens parametre
-     * Altså vores parametre er @param tile/feltnr og @param gui
-     */
-    public Chance(int feltnr, GUI gui){
+ /**
+ * Vi laver en konstruktør, der tager feltnumre (tilenumre) og gui´en som dens parametre
+ * Altså vores parametre er @param tile/feltnr og @param gui
+ */
+ public Chance(int feltnr, GUI gui){
         super(feltnr, gui);
     }
 
-    @Override
-    public String toString(){ return "Du har nu landet på Chance, nu skal du bare trykke FORTSÆT for at trække et chancekort.";}
+ @Override
+ public String toString(){ return "Du har nu landet på Chance, nu skal du bare trykke FORTSÆT for at trække et chancekort.";}
 
-    public void setChancekort() {this.chanceTekstbeskrivelse = chance.trukketKort();}
+ public void setChancekort() {this.chanceTekstbeskrivelse = chance.trukketKort();}
 
-    public String getChancekort(){ return chanceTekstbeskrivelse.split("#")[1];}
+ public String getChancekort(){ return chanceTekstbeskrivelse.split("#")[1];}
 
-    /**
-     * Metoden fra OverordnedeFelter bliver "overridet" af landOnField
-     * Metoden indeholder felt-logikken for chance
-     * Vores er parameter er @param Spiller/Player
-     */
-    @Override
-    public void landOnField (Spiller spiller){
-        String felt;
-        gui.showMessage(toString());
-//        setChancekort();
-        boolean nytKort=true;
-        while (nytKort==true) {
+ /**
+ * Metoden fra OverordnedeFelter bliver "overridet" af landOnField
+ * Metoden indeholder felt-logikken for chance
+ * Vores er parameter er @param Spiller/Player
+ */
+
+ @Override
+ public void landOnField (Spiller spiller){
+
+     String felt;
+     gui.showMessage(toString());
+     setChancekort();
+     boolean nytKort=true;
+     while (nytKort==true) {
             nytKort = false;
             switch (chanceTekstbeskrivelse.split("#")[0]) {
             case "Chance1":
@@ -107,7 +109,7 @@ public class Chance extends bræt.OverordnedeFelter {
                 gui.setChanceCard(getChancekort());
                 gui.displayChanceCard();
                 gui.showMessage("");
-        //        spiller.setFødselsdag(true);
+                spiller.setFødselsdag(true);
                 break;
             case "Chance11":
                 gui.setChanceCard(getChancekort());
