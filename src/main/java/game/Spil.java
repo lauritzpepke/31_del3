@@ -16,34 +16,30 @@ public static void playGame()
     Bræt b = new Bræt();
     GUI gui = new GUI(b.Bræt());
 
-    // kør metode for nye spillere, return værdi af antal spillere
+    // kør metode for nye spillere
     String antalSpillere_string = gui.getUserButtonPressed("Indtast hvor mange spillere i er fra 2-4.", "2", "3", "4");
    int antalSpillere = Integer.parseInt(antalSpillere_string);
 
+   int startBalance = 0;
+
    if (antalSpillere == 2) {
-       int startBalance = 20;
+       startBalance = 20;
    }
    else if (antalSpillere == 3) {
-       int startBalance = 18;
+       startBalance = 18;
    }
    else if (antalSpillere == 4) {
-       int startBalance = 16;
+       startBalance = 16;
    }
 
-   Scanner sc = new Scanner(System.in);
-   String fåNavn = gui.getUserSelection("Hvad er dit navn?", sc.nextLine());
+   String fåNavn = gui.getUserString("Hvad er dit navn?");
 
    Spiller[] spillerArray = new Spiller[antalSpillere];
    GUI_Car[] bil = new GUI_Car[4];
 
-    for (int i = 0; i < antalSpillere; i++) {
+    for (int i = 0; i <= spillerArray.length; i++) {
         spillerArray[i] = new Spiller(fåNavn, startBalance , bil[i] );
     }
-
-    // bruger gui
-
-    // få info fra spillere
-    // MINDST 2 spillere MAKS 4
 
 
 
