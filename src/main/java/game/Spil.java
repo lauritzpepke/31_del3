@@ -1,6 +1,7 @@
 package game;
 
 import gui_fields.GUI_Car;
+import gui_fields.GUI_Field;
 import gui_fields.GUI_Player;
 import java.awt.*;
 import java.util.Scanner;
@@ -34,14 +35,22 @@ public static void playGame()
 
    Spiller[] spillerArray = new Spiller[antalSpillere];
    GUI_Car[] bil = new GUI_Car[antalSpillere];
-    GUI_Player[] spillere = new GUI_Player[antalSpillere];
+   GUI_Player[] spillere = new GUI_Player[antalSpillere];
 
    String fåNavn;
     for (int i = 0; i < spillerArray.length ; i++) {
         fåNavn = gui.getUserString("Hvad er dit navn?");
+        bil[i] = new GUI_Car();
         spillerArray[i] = new Spiller(fåNavn, startBalance, bil[i]);
         spillere[i] = new GUI_Player(fåNavn, startBalance, bil[i]);
     }
+
+    for (int i = 0; i < spillere.length; i++) {
+        gui.addPlayer(spillere[i]);
+        GUI_Field field = gui.getFields()[0];
+        field.setCar(spillere[i], true);
+    }
+
 
 
 
