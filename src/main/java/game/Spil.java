@@ -11,33 +11,30 @@ public class Spil {
     static TerningeKast dieThrow = new TerningeKast();
     UI ui = new UI();
 
-public static void playGame()
-{
+public static void playGame() {
     Bræt b = new Bræt();
     GUI gui = new GUI(b.Bræt());
 
     // kør metode for nye spillere
     String antalSpillere_string = gui.getUserButtonPressed("Indtast hvor mange spillere i er fra 2-4.", "2", "3", "4");
-   int antalSpillere = Integer.parseInt(antalSpillere_string);
+    int antalSpillere = Integer.parseInt(antalSpillere_string);
 
-   int startBalance = 0;
+    int startBalance = 0;
 
-   if (antalSpillere == 2) {
-       startBalance = 20;
-   }
-   else if (antalSpillere == 3) {
-       startBalance = 18;
-   }
-   else if (antalSpillere == 4) {
-       startBalance = 16;
-   }
+    if (antalSpillere == 2) {
+        startBalance = 20;
+    } else if (antalSpillere == 3) {
+        startBalance = 18;
+    } else if (antalSpillere == 4) {
+        startBalance = 16;
+    }
 
-   Spiller[] spillerArray = new Spiller[antalSpillere];
-   GUI_Car[] bil = new GUI_Car[antalSpillere];
-   GUI_Player[] spillere = new GUI_Player[antalSpillere];
+    Spiller[] spillerArray = new Spiller[antalSpillere];
+    GUI_Car[] bil = new GUI_Car[antalSpillere];
+    GUI_Player[] spillere = new GUI_Player[antalSpillere];
 
-   String fåNavn;
-    for (int i = 0; i < spillerArray.length ; i++) {
+    String fåNavn;
+    for (int i = 0; i < spillerArray.length; i++) {
         fåNavn = gui.getUserString("Hvad er dit navn?");
         bil[i] = new GUI_Car();
         spillerArray[i] = new Spiller(fåNavn, startBalance, bil[i]);
@@ -50,51 +47,24 @@ public static void playGame()
         field.setCar(spillere[i], true);
     }
 
+    // kør spil indtil en går fallit
     CheckTaber taber = new CheckTaber();
-            while(!taber.isCheckTaber()) {
-                for(int i = 0; i < spillerArray.length; i++) {
-                    if(taber.isCheckTaber()){ // Tjekkem om spiller har tabt
-                        break;
-                    }
-                    TerningeKast(spillerArray[i], spillerArray, i, gui);   //Kaster terning
-                    int felt = tur(spillerArray[i], spillerArray, i, gui); // Bruger tur
-                    if(taber.isCheckTaber()){  // Tjekker om spiller har tabt
-                        break;
-                    }
+    while (!taber.isCheckTaber()) {
+        for (int i = 0; i < spillerArray.length; i++) {
+            if (taber.isCheckTaber()) { // Tjekkem om spiller har tabt
+                break;
+            }
+            TerningeKast(spillerArray[i], spillerArray, i, gui);   //Kaster terning
+            int felt = tur(spillerArray[i], spillerArray, i, gui); // Bruger tur
+            if (taber.isCheckTaber()) {  // Tjekker om spiller har tabt
+                break;
+            }
 
 
-                    // opret spillere
-                    /**
-                     * Oprettet forskellige objekter og array's
-                     */
-                    String[] navn = new String[4];
-                    Color[] farve = {Color.red, Color.BLUE, Color.green, Color.yellow};
-
-
-                    // switch(antalSpillere) {
-                    //  case 2:
-                    //    spillere[] =new GUI_Player(navn[],20, bil[]);
-                    //    break;
-                    // case 3:
-                    //    spillere[] =new GUI_Player(navn[],18, bil[]);
-                    //     break;
-                    // case 4:
-                    //      spillere[] =new GUI_Player(navn[],16, bil[]);
-                    //    break;
-                    //  default:
-                    //     break;
-                    // }
-
-
-                    // rækkefølge baseret på alder
-
-
-                    // start gui for selve spillet
-
-                    // kør spil indtil en går fallit
-
-
-                    //bestem vinder
-                }
+        }
 
     }
+
+    //bestem vinder
+
+}
