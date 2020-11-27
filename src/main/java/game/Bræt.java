@@ -10,6 +10,8 @@ import gui_fields.GUI_Refuge;
 import gui_fields.GUI_Street;
 
 
+import java.awt.*;
+
 /**
  * Klasse der indeholder brættet til spillet
  */
@@ -190,6 +192,10 @@ public class Bræt {
 
 
         };
+
+    public void landOnField(Spiller spiller) {
+        felter[spiller.getPlacering()].landOnField(spiller);
+    }
         }
 
 
