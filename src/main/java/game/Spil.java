@@ -1,6 +1,6 @@
 package game;
 public class Spil {
-TerningeKast dieThrow = new TerningeKast();
+    static TerningeKast dieThrow = new TerningeKast();
 
 public void playGame()
 {
