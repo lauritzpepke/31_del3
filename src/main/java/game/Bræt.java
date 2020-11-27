@@ -1,5 +1,7 @@
 package game;
 
+import gui_fields.*;
+
 /**
  * Klasse der indeholder brættet til spillet
  */
@@ -46,6 +48,18 @@ public class Bræt {
      */
     public Felt[] getTiles() {
         return tiles;
+    }
+
+    public GUI_Field [] guibræt() {
+        return new GUI_Field[]{
+                new GUI_Start(),
+                new GUI_Street(),
+                new GUI_Chance(),
+                new GUI_Jail(),
+
+
+        }
+        }
     }
 
 }
