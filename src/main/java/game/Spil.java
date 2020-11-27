@@ -11,7 +11,6 @@ import gui_main.GUI;
 
 public class Spil {
     private ArrayList<Spiller> spillerListe = new ArrayList<Spiller>();
-    private GUIsamling GUIs = new GUIsamling();
     private int bankerotSpillere;
     private boolean ingenVinder;
 
@@ -64,9 +63,7 @@ public class Spil {
                 if (yes == true) {
                     dieThrow.throwTheDie();
                     gui.setDie(dieThrow.getDieValue());
-
                 }
-
 
             }
 
