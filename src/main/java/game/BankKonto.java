@@ -7,7 +7,7 @@ public class BankKonto {
     private int balance;
 
     public BankKonto(int balance) {
-        this.balance = 0;
+        this.balance = balance;
     }
 
     /**
