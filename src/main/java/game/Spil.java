@@ -10,7 +10,6 @@ import game.CheckTaber;
 import gui_main.GUI;
 
 public class Spil {
-    private TerningeKast dieThrow = new TerningeKast();
     private ArrayList<Spiller> spillerListe = new ArrayList<Spiller>();
     private GUIsamling GUIs = new GUIsamling();
     private int bankerotSpillere;
@@ -19,6 +18,7 @@ public class Spil {
     public static void playGame() {
         Bræt b = new Bræt();
         GUI gui = new GUI(b.Bræt());
+        TerningeKast dieThrow = new TerningeKast();
 
         // kør metode for nye spillere
         String antalSpillere_string = gui.getUserButtonPressed("Indtast hvor mange spillere i er fra 2-4.", "2", "3", "4");
