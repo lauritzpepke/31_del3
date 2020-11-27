@@ -34,16 +34,12 @@ public static void playGame()
 
    Spiller[] spillerArray = new Spiller[antalSpillere];
    GUI_Car[] bil = new GUI_Car[antalSpillere];
+    GUI_Player[] spillere = new GUI_Player[antalSpillere];
 
    String fåNavn;
     for (int i = 0; i < spillerArray.length ; i++) {
         fåNavn = gui.getUserString("Hvad er dit navn?");
         spillerArray[i] = new Spiller(fåNavn, startBalance, bil[i]);
-    }
-
-    GUI_Player[] spillere = new GUI_Player[antalSpillere];
-    for (int i = 0; i < spillere.length; i++) {
-        fåNavn = gui.getUserString("Hvad er dit navn?");
         spillere[i] = new GUI_Player(fåNavn, startBalance, bil[i]);
     }
 
