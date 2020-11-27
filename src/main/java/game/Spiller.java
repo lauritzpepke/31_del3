@@ -1,6 +1,5 @@
 package game;
 
-import game.BankKonto;
 import gui_fields.GUI_Car;
 
 import java.awt.*;
