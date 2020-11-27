@@ -4,12 +4,17 @@ import gui_fields.GUI_Car;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Player;
 import java.awt.*;
+import java.util.ArrayList;
+
 import game.CheckTaber;
 import gui_main.GUI;
 
 public class Spil {
-    static TerningeKast dieThrow = new TerningeKast();
-    UI ui = new UI();
+    private TerningeKast dieThrow = new TerningeKast();
+    private ArrayList<Spiller> spillerListe = new ArrayList<Spiller>();
+    private GUIsamling GUIs = new GUIsamling();
+    private int bankerotSpillere;
+    private boolean ingenVinder;
 
     public static void playGame() {
         Bræt b = new Bræt();
@@ -70,5 +75,15 @@ public class Spil {
         //bestem vinder
 
 
+    }
+
+    private void checkForVinder() {
+        for (int i = 0; i < spillerListe.size(); i++) {
+            if (spillerListe.get(i).erBankerot() == false) {
+                GUIsamling.vinderBesked(spillerListe.get(i));
+                GUIsamling.exitSpil(spillerListe.get(i));
+                System.exit(0);
+            }
+        }
     }
 }
