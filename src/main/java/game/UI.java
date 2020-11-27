@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class UI
 {
-	int bestemAntalSpillere()
+	static int bestemAntalSpillere()
 	{
 		int spillerAntal = 0;
 		Scanner input = new Scanner(System.in);
