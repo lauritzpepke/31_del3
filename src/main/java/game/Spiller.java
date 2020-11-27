@@ -6,19 +6,20 @@ import gui_fields.GUI_Car;
 import java.awt.*;
 
 public class Spiller {
-    BankKonto bk = new BankKonto(0);
     private String navn;
-    private int balance;
+    private BankKonto bk;
     private int alder;
     private int placering = 0;
     private static Color farve;
     private boolean fængsel;
     private boolean gratis;
     private boolean frikort;
+    private GUI_Car bil;
 
-    public Spiller(String navn, int balance) {
+    public Spiller(String navn, int balance, GUI_Car bil) {
         this.navn = navn;
-        this.balance = balance;
+        this.bk = new BankKonto(balance);
+        this.bil = bil;
     }
 
     public void setNavn(String navn) { this.navn = navn; }
