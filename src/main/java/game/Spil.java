@@ -54,10 +54,11 @@ public static void playGame() {
             if (taber.isCheckTaber()) { // Tjekkem om spiller har tabt
                 break;
             }
-            TerningeKast(spillerArray[i], spillerArray, i, gui);   //Kaster terning
-            int felt = tur(spillerArray[i], spillerArray, i, gui); // Bruger tur
-            if (taber.isCheckTaber()) {  // Tjekker om spiller har tabt
-                break;
+
+            dieThrow.throwTheDie();
+            gui.setDie(dieThrow.getDieValue());
+
+
             }
 
 
