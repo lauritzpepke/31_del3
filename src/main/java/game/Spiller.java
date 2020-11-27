@@ -47,6 +47,13 @@ public class Spiller {
     }
         return nuværendePlacering;
     }
+
+    public boolean erBankerot() {
+        if (this.rigdom <= 0)
+            return true;
+        else
+            return false;
+    }
 }
 
 
