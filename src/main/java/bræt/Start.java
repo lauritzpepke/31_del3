@@ -19,11 +19,11 @@ public class Start extends OverordnedeFelter {
     }
 
 //Udskrivelsen af toString beskeden er når en spiller lander enten på start eller passere start feltet.
-
+    @Override
     public String toString() {
         if(feltnr == 0) {
             return "Du har landet på start, og vil derfor modtage en startbonus på " + startbonus + "M";
-    }
+        }
         else{
             return "Du har passeret start, og vil derfor modtage en startbonus på " + startbonus + "M";
 
@@ -31,11 +31,9 @@ public class Start extends OverordnedeFelter {
     }
 
 // Nedensåtende medtode er udskrivelsen af teksten fra toString for startfeltet.
-
+    @Override
     public void landOnField(Spiller spiller) {
         gui.showMessage(toString());
-
     }
-
 }
 
