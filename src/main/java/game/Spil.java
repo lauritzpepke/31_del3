@@ -80,8 +80,6 @@ public class Spil {
     private void checkForVinder() {
         for (int i = 0; i < spillerListe.size(); i++) {
             if (spillerListe.get(i).erBankerot() == false) {
-                GUIsamling.vinderBesked(spillerListe.get(i));
-                GUIsamling.exitSpil(spillerListe.get(i));
                 System.exit(0);
             }
         }
