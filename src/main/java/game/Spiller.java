@@ -1,11 +1,14 @@
 package game;
 
 import game.BankKonto;
+import gui_fields.GUI_Car;
 
 import java.awt.*;
 
-public class Spiller extends BankKonto {
+public class Spiller {
+    BankKonto bk = new BankKonto(0);
     private String navn;
+    private int balance;
     private int alder;
     private int placering = 0;
     private static Color farve;
@@ -13,6 +16,10 @@ public class Spiller extends BankKonto {
     private boolean gratis;
     private boolean frikort;
 
+    public Spiller(String navn, int balance) {
+        this.navn = navn;
+        this.balance = balance;
+    }
 
     public void setNavn(String navn) { this.navn = navn; }
 

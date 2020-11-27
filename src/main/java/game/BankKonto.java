@@ -6,7 +6,7 @@ package game;
 public class BankKonto {
     private int balance;
 
-    public BankKonto() {
+    public BankKonto(int balance) {
         this.balance = 0;
     }
 
