@@ -28,7 +28,6 @@ public void playGame()
     GUI_Car[] bil = new GUI_Car[4];
     Color[] farve = {Color.red, Color.BLUE, Color.green, Color.yellow};
     CheckTaber taber = new CheckTaber();
-    Bræt spillebræt = new Bræt();
 
 
     Spiller[] spillerArray = new Spiller[antalSpillere];
