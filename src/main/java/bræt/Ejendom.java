@@ -17,7 +17,7 @@ public class Ejendom extends bræt.OverordnedeFelter {
     private Spiller spiller;
     private String feltNavn;
 
-    private int makkerFeltnr;
+    private int medspillerFeltnr;
 
 // Konstruktøren tager parametrene feltnr og gui.
 // Konstruktøren består af en switch statement, hvor hver case har et feltnr,
@@ -28,37 +28,37 @@ public class Ejendom extends bræt.OverordnedeFelter {
     public Ejendom(int feltnr, GUI gui) {
         super(feltnr, gui);
         switch (feltnr){
-            case 1: feltNavn = "Brugerbaren"; pris = 1; makkerFeltnr = 2;
+            case 1: feltNavn = "Brugerbaren"; pris = 1; medspillerFeltnr = 2;
             break;
-            case 2: feltNavn = "Pizzariaet"; pris = 1; makkerFeltnr = 1;
+            case 2: feltNavn = "Pizzariaet"; pris = 1; medspillerFeltnr = 1;
             break;
-            case 4: feltNavn = "Slikbutikken"; pris = 1; makkerFeltnr = 5;
+            case 4: feltNavn = "Slikbutikken"; pris = 1; medspillerFeltnr = 5;
             break;
-            case 5: feltNavn = "Iskiosken"; pris = 1; makkerFeltnr = 4;
+            case 5: feltNavn = "Iskiosken"; pris = 1; medspillerFeltnr = 4;
             break;
-            case 7: feltNavn = "Museet"; pris = 2; makkerFeltnr = 8;
+            case 7: feltNavn = "Museet"; pris = 2; medspillerFeltnr = 8;
             break;
-            case 8: feltNavn = "Biblioteket"; pris = 2; makkerFeltnr = 7;
+            case 8: feltNavn = "Biblioteket"; pris = 2; medspillerFeltnr = 7;
             break;
-            case 10: feltNavn = "Skaterparken"; pris = 2; makkerFeltnr = 11;
+            case 10: feltNavn = "Skaterparken"; pris = 2; medspillerFeltnr = 11;
             break;
-            case 11: feltNavn = "Svømmebassenget"; pris = 2; makkerFeltnr = 10;
+            case 11: feltNavn = "Svømmebassenget"; pris = 2; medspillerFeltnr = 10;
             break;
-            case 13: feltNavn = "Spillehallen"; pris = 3; makkerFeltnr = 14;
+            case 13: feltNavn = "Spillehallen"; pris = 3; medspillerFeltnr = 14;
             break;
-            case 14: feltNavn = "Biografen"; pris = 3; makkerFeltnr = 13;
+            case 14: feltNavn = "Biografen"; pris = 3; medspillerFeltnr = 13;
             break;
-            case 16: feltNavn = "Lejetøjsbutikken"; pris = 3; makkerFeltnr = 17;
+            case 16: feltNavn = "Lejetøjsbutikken"; pris = 3; medspillerFeltnr = 17;
             break;
-            case 17: feltNavn = "Dyrehaven"; pris = 3; makkerFeltnr = 16;
+            case 17: feltNavn = "Dyrehaven"; pris = 3; medspillerFeltnr = 16;
             break;
-            case 19: feltNavn = "Bowlinghallen"; pris = 4; makkerFeltnr = 20;
+            case 19: feltNavn = "Bowlinghallen"; pris = 4; medspillerFeltnr = 20;
             break;
-            case 20: feltNavn = "Zoo"; pris = 4; makkerFeltnr = 19;
+            case 20: feltNavn = "Zoo"; pris = 4; medspillerFeltnr = 19;
             break;
-            case 22: feltNavn = "Vandlandet"; pris = 5; makkerFeltnr = 23;
+            case 22: feltNavn = "Vandlandet"; pris = 5; medspillerFeltnr = 23;
             break;
-            case 23: feltNavn = "Strandpromenaden"; pris = 5; makkerFeltnr = 22;
+            case 23: feltNavn = "Strandpromenaden"; pris = 5; medspillerFeltnr = 22;
             // Vi har valgt ikke at benytte os af defualt, da vi ved at vi ikke kan ende dertil.
             default:
                 break;
@@ -67,6 +67,7 @@ public class Ejendom extends bræt.OverordnedeFelter {
 
 // Anvendelsen af toString er til udskrivning af beskeden, når spilleren lander på et felt.
 
+    @Override
     public String toString(){
         return "Du er landet på " + feltNavn;
     }
@@ -74,6 +75,7 @@ public class Ejendom extends bræt.OverordnedeFelter {
 
 
 // setEjer sætter ejeren på ejendomsfeltet og markerer feltet med spillerens farve.
+
     public void setEjer(Spiller spiller) {
         GUI_Field f = gui.getFields()[feltnr];
         if(f instanceof GUI_Ownable){
@@ -102,10 +104,12 @@ public class Ejendom extends bræt.OverordnedeFelter {
 // landOnField er ejendommens felt
 // Vi anvender metoden til at se om spilleren skal købe feltet, betale husleje
 // eller ved at få et chancekort feltet gratis.
+// Vores parameter @param Spiller
 
+    @Override
     public void landOnField(Spiller spiller) {
 
-// Hvis ejendommen er til salg, altså hvis spilleren får den gratis - feks. ved chancekort.
+        // Hvis ejendommen er til salg, altså hvis spilleren får den gratis - feks. ved chancekort.
 
         if (spiller.getGratis() && isTilsalg()) {
             gui.showMessage(toString() + " og får grunden gratis");
@@ -126,7 +130,7 @@ public class Ejendom extends bræt.OverordnedeFelter {
 //Hvis ejendommen ejes, og der skal betales for huslejen:
         else if (!isTilsalg() && getEjer() != spiller) {
             // Ejeren af feltet også ejer et andet felt i samme farve:
-            if (getEjer().ejerEjendom(makkerFeltnr)) {
+            if (getEjer().ejerEjendom(medspillerFeltnr)) {
                 gui.showMessage(toString() + ". Da " + getEjer().getNavn() + " også ejer det andet felt af samme farve skal " + spiller.getNavn() + " betale dobbelt pris," + (2 * pris) + "M til " + getEjer().getNavn());
                 getEjer().ændrLikvideMidler(2 * pris);
                 spiller.ændrLikvideMidler(-2 * pris);
