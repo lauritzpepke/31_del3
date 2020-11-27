@@ -10,7 +10,7 @@ public class Main {
 //        Spil spil = new Spil();
 //        Spil.playGame();
         Bræt b = new Bræt();
-        GUI gui = new GUI(b.guibræt());
+        GUI gui = new GUI(b.Bræt());
 
         }
 }

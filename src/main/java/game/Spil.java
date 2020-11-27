@@ -33,19 +33,19 @@ public void playGame()
 
     Spiller[] spillerArray = new Spiller[antalSpillere];
 
-    switch(antalSpillere) {
-        case 2:
-            spillere[] =new GUI_Player(navn[],20, bil[]);
-            break;
-        case 3:
-            spillere[] =new GUI_Player(navn[],18, bil[]);
-            break;
-        case 4:
-            spillere[] =new GUI_Player(navn[],16, bil[]);
-            break;
-        default:
-            break;
-    }
+    // switch(antalSpillere) {
+      //  case 2:
+        //    spillere[] =new GUI_Player(navn[],20, bil[]);
+        //    break;
+       // case 3:
+        //    spillere[] =new GUI_Player(navn[],18, bil[]);
+       //     break;
+       // case 4:
+      //      spillere[] =new GUI_Player(navn[],16, bil[]);
+        //    break;
+      //  default:
+       //     break;
+   // }
 
 
 }

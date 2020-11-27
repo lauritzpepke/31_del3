@@ -93,4 +93,7 @@ public class Spiller {
 
     public void ændrLikvideMidler(int i) {
     }
+
+    public void changeBalance(int i) {
+    }
 }
